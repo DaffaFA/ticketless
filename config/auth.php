@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'penumpang',
         ],
 
         'api' => [
@@ -66,9 +66,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'penumpang' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Penumpang::class,
         ],
 
         // 'users' => [
@@ -93,8 +93,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'penumpang' => [
+            'provider' => 'penumpang',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
