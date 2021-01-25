@@ -41,9 +41,15 @@ return [
             'provider' => 'penumpang',
         ],
 
-        'api' => [
+        'penumpang' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'penumpang',
+            'hash' => false,
+        ],
+
+        'petugas' => [
+            'driver' => 'token',
+            'provider' => 'petugas',
             'hash' => false,
         ],
     ],
@@ -69,6 +75,11 @@ return [
         'penumpang' => [
             'driver' => 'eloquent',
             'model' => App\Penumpang::class,
+        ],
+
+        'petugas' => [
+            'driver' => 'eloquent',
+            'model' => App\Petugas::class,
         ],
 
         // 'users' => [
