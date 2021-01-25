@@ -21,4 +21,9 @@ class Penumpang extends Authenticatable
     {
         return 'username';
     }
+
+    public function pemesanans()
+    {
+        return $this->hasMany(Pemesanan::class, 'id_pemesanan');
+    }
 }
