@@ -16,7 +16,7 @@ class CreateTransportasisTable extends Migration
         Schema::create('transportasi', function (Blueprint $table) {
             $table->id('id_transportasi');
             $table->string('kode');
-            $table->string('jumlah_kursi');
+            $table->integer('jumlah_kursi');
             $table->string('keterangan');
             $table->unsignedBigInteger('id_type_transportasi');
             $table->timestamps();

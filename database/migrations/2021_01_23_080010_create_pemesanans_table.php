@@ -15,7 +15,7 @@ class CreatePemesanansTable extends Migration
     {
         Schema::create('pemesanan', function (Blueprint $table) {
             $table->id('id_pemesanan');
-            $table->string('kode_pemasanan');
+            $table->string('kode_pemesanan');
             $table->dateTime('tanggal_pemesanan');
             $table->string('tempat_pemesanan');
             $table->unsignedBigInteger('id_pelanggan');

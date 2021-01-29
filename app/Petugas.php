@@ -9,6 +9,8 @@ class Petugas extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = 'petugas';
+
     protected $guarded = [];
 
     protected $hidden = [
@@ -18,5 +20,10 @@ class Petugas extends Authenticatable
     public function username()
     {
         return 'username';
+    }
+
+    public function pemesanans()
+    {
+        return $this->hasMany(Pemesanan::class);
     }
 }

@@ -17,7 +17,7 @@ class CreatePetugasTable extends Migration
             $table->id('id_petugas');
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('name_petugas');
+            $table->string('nama_petugas');
             $table->unsignedBigInteger('id_level');
             $table->rememberToken();
             $table->timestamps();

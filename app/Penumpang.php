@@ -24,6 +24,6 @@ class Penumpang extends Authenticatable
 
     public function pemesanans()
     {
-        return $this->hasMany(Pemesanan::class, 'id_pemesanan');
+        return $this->hasMany(Pemesanan::class);
     }
 }
