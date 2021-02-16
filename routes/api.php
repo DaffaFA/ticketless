@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:petugas,penumpang')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::middleware('auth:petugas,penumpang')->get('/user', 'API\AuthController@getUser');
+Route::middleware('auth:petugas,penumpang')->get('/admin/user', 'API\AuthController@getAdmin');
 
 Route::post('/register', 'API\AuthController@register');
-Route::post('/login', 'API\AuthController@login'); 
+Route::post('/login', 'API\AuthController@login');
+Route::post('/logout', 'API\AuthController@logout');
+
+Route::prefix('/admin')->group(function () {
+    Route::post('/login', 'API\AuthController@adminLogin');
+});

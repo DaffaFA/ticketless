@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+        'guard' => 'penumpang-session',
+        'passwords' => 'penumpang',
     ],
 
     /*
@@ -36,7 +36,7 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'penumpang-session' => [
             'driver' => 'session',
             'provider' => 'penumpang',
         ],
@@ -51,6 +51,11 @@ return [
             'driver' => 'token',
             'provider' => 'petugas',
             'hash' => false,
+        ],
+
+        'petugas-session' => [
+            'driver' => 'session',
+            'provider' => 'petugas',
         ],
     ],
 

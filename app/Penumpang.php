@@ -9,6 +9,8 @@ class Penumpang extends Authenticatable
 {
     use Notifiable;
 
+    protected $primaryKey = 'id_penumpang';
+
     protected $table = 'penumpang';
 
     protected $guarded = [];

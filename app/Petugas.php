@@ -9,6 +9,8 @@ class Petugas extends Authenticatable
 {
     use Notifiable;
 
+    protected $primaryKey = 'id_petugas';
+
     protected $table = 'petugas';
 
     protected $guarded = [];
@@ -25,5 +27,10 @@ class Petugas extends Authenticatable
     public function pemesanans()
     {
         return $this->hasMany(Pemesanan::class);
+    }
+
+    public function level()
+    {
+        return $this->hasOne(Level::class, 'id_level');
     }
 }
